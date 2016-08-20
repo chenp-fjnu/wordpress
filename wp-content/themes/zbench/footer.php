@@ -4,7 +4,9 @@
 	<div id="footer-inside">
 		<p>
 			<?php _e('Copyright', 'zbench'); ?> &copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?>
-			| <?php printf(__('Powered by %1$s and %2$s', 'zbench'), '<a href="http://zww.me">zBench</a>', '<a href="http://wordpress.org/">WordPress</a>'); ?>
+			| <?php printf(__('Powered by %1$s and %2$s', 'zbench'), 
+			'<a href="http://localhost:8080/wordpress">PingX</a>', 
+			'<a href="http://wordpress.org/">WP官方网站</a>'); ?>
 		</p>
 		<span id="back-to-top">&uarr; <a href="#" rel="nofollow" title="Back to top"><?php _e('Top', 'zbench'); ?></a></span>
 	</div>

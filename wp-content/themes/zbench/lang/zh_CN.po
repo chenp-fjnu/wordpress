@@ -93,11 +93,11 @@ msgstr "没有评论"
 
 #: archive.php:31 index.php:21
 msgid "comment"
-msgstr "条评论"
+msgstr "评论数: "
 
 #: archive.php:31 index.php:21
 msgid "comments"
-msgstr "条评论"
+msgstr "评论数: "
 
 #: archive.php:35 functions.php:138 index.php:25
 msgid "Read more &raquo;"
@@ -118,11 +118,11 @@ msgstr "这是受保护的文章，输入密码才能查看评论。"
 #: comments.php:18 comments.php:25 page-without-sidebar.php:12 page.php:8
 #: single.php:14
 msgid "Leave a comment ?"
-msgstr "发表评论？"
+msgstr "+1"
 
 #: comments.php:18 comments.php:25
 msgid "Comments."
-msgstr "条评论。"
+msgstr "评论数: "
 
 #: comments.php:27
 msgid "Comments are closed."
@@ -490,7 +490,7 @@ msgstr ""
 #~ msgstr "设置已保存"
 
 #~ msgid "1 comments"
-#~ msgstr "1条评论 "
+#~ msgstr "评论数: 1 "
 
 #~ msgid "&raquo; Read more..."
 #~ msgstr "&raquo; 继续阅读..."
@@ -517,17 +517,17 @@ msgstr ""
 #~ msgstr "摘录"
 
 #~ msgid "1% comments"
-#~ msgstr "1%条评论 "
+#~ msgstr "评论数: 1%"
 
 #~ msgid "% comments"
-#~ msgstr "1%条评论"
+#~ msgstr "评论数: 1%"
 
 #~ msgid "&nbsp;% comments"
-#~ msgstr "&nbsp;% 条评论"
+#~ msgstr "评论数: &nbsp;%"
 
 #, fuzzy
 #~ msgid "z % comments"
-#~ msgstr " % 条评论"
+#~ msgstr "评论数:  %"
 
 #~ msgid "Please do not load this page directly. Thanks!"
 #~ msgstr "请不要直接加载这个页面。谢谢！"
