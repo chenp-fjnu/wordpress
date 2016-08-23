@@ -1,4 +1,8 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-   "php.validate.executablePath": "C://Program Files//PHP//v7.0//php.exe", 
+   "php.validate.executablePath": "C://Program Files//PHP//v7.0//php.exe",
+  "bookmarks.navigateThroughAllFiles": true,
+  "bookmarks.saveBookmarksBetweenSessions": true,
+  "bookmarks.gutterIconPath": "c:\\temp\\othericon.png",
+  "bookmarks.useStickyBookmarks": true
 }
