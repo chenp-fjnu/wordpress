@@ -3,9 +3,14 @@ working on wordpress
 
 # Wiki
 https://developer.wordpress.org/
+
 https://make.wordpress.org/core/handbook/best-practices/
+
 http://www.wpcourse.com/
+
 https://yun.baidu.com/share/home?uk=1476693679&view=share#category/type=0
+
+https://developer.wordpress.org/plugins/
 
 # WAMP server
 http://www.wampserver.com/en/
