@@ -10,7 +10,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'inkness' ); ?></h1>
+		<h1 class="page-title">什么都没有找到...</h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -20,7 +20,7 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'inkness' ); ?></p>
+			<p>无法找到匹配结果，请输入其它内容进行搜索。</p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>

@@ -249,6 +249,20 @@ function optionsframework_options() {
 		'type' => 'info');	
 
 	$options[] = array(
+		'name' => "微博",
+		'desc' => __('微博页面 比如: http://weibo.com/u/1567896867', 'inkness'),
+		'id' => 'weibo',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+	$options[] = array(
+		'name' => "weixin",
+		'desc' => __('微信号 比如: chenp_fjnu', 'inkness'),
+		'id' => 'weixin',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+	$options[] = array(
 		'name' => __('Facebook', 'inkness'),
 		'desc' => __('Facebook Profile or Page URL i.e. http://facebook.com/username/ ', 'inkness'),
 		'id' => 'facebook',

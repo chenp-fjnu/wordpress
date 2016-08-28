@@ -31,5 +31,6 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
+<?php get_template_part('sidebar', 'footer'); ?>
 <?php get_sidebar('footer'); ?>
 <?php get_footer(); ?>
