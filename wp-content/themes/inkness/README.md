@@ -1,8 +1,7 @@
 #Key Code Snippets
 * options.php include all options for customization.
 ```php
-of_get_option( $name, $default = false )
-  //it will get the option value.
+of_get_option( $name, $default = false )//it will get the option value.
 ```
 * echo whole template file, social-fa.php and slider-nivo.php for these samples.
 ```php
@@ -10,11 +9,9 @@ of_get_option( $name, $default = false )
 
 <?php get_template_part('slider', 'nivo'); ?>
 
-<?php get_template_part('sidebar', 'footer'); ?>
-  *equals*
-  <?php get_sidebar('footer'); ?>
+<?php get_template_part('sidebar', 'footer'); ?> *equals* <?php get_sidebar('footer'); ?>
 ```
-* check option and share it in social-fa.php seciton
+* check option and show it in social-fa.php seciton
 
 ```php
 <?php if ( of_get_option('weibo', true) != "") { ?>
