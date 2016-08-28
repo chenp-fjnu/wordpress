@@ -17,6 +17,39 @@
  */
 if ( post_password_required() )
 	return;
+function navi_comments_page_link($previousNum = 1,$label = '') {
+	echo get_navi_comments_page_link($previousNum,$label);
+}
+function get_navi_comments_page_link($previousNum = 0,$label = '' ) {
+	if ( ! is_singular() )
+		return;
+
+	$page = get_query_var('cpage');
+
+	if ( intval($page) < 1 )
+		return;
+	$prevpage = intval($page) - $previousNum;
+	if ( $prevpage <= 0 )
+		return;
+	if ( empty($max_page) )
+		$max_page = $wp_query->max_num_comment_pages;
+
+	if ( empty($max_page) )
+		$max_page = get_comment_pages_count();
+
+	if ( $prevpage > $max_page )
+		return;
+	/**
+	* Filters the anchor tag attributes for the previous comments page link.
+	*
+	* @since 2.7.0
+	*
+	* @param string $attributes Attributes for the anchor tag.
+	*/
+	if($label=='')
+		$label=$prevpage ;
+	return '<a style="margin:3px;padding:4px 8px;background:#CCC;color:white;" href="' . esc_url( get_comments_pagenum_link( $prevpage ) ) . '" ' . apply_filters( 'previous_comments_link_attributes', '' ) . '>' .$label.'</a>';
+}
 ?>
 
 	<div id="comments" class="comments-area">
@@ -26,16 +59,22 @@ if ( post_password_required() )
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'inkness' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+				echo 'Total Comments: '.get_comments_number();
+			
 			?>
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'inkness' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'inkness' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'inkness' ) ); ?></div>
+			<div ><?php 
+					navi_comments_page_link(-2,'<<'); 
+				 	navi_comments_page_link(-1); 
+					navi_comments_page_link(0); 
+			 		navi_comments_page_link(1); 
+			 		navi_comments_page_link(2,'>>');
+				 
+			 ?></div>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
 
@@ -54,8 +93,14 @@ if ( post_password_required() )
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'inkness' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'inkness' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'inkness' ) ); ?></div>
+			<div ><?php 
+					navi_comments_page_link(-2,'<<'); 
+				 	navi_comments_page_link(-1); 
+					navi_comments_page_link(0); 
+			 		navi_comments_page_link(1); 
+			 		navi_comments_page_link(2,'>>');
+				 
+			 ?></div>
 		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
@@ -101,7 +146,9 @@ if ( post_password_required() )
 		      '<div class="form-group><label for="url">' .
 		      __( 'Website', 'inkness' ) . '</label>' .
 		      '<input id="url" name="url" class="form-control" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
-		      '" size="30" /></div>'
+		      '" size="30" /></div>',
+			  
+			'label_submit' =>'点击发布 / Ctrl+Enter'
 		    )
 		  ),
 		);

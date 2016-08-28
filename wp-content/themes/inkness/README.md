@@ -9,7 +9,7 @@ of_get_option( $name, $default = false )//it will get the option value.
 
 <?php get_template_part('slider', 'nivo'); ?>
 
-<?php get_template_part('sidebar', 'footer'); ?> *equals* <?php get_sidebar('footer'); ?>
+<?php get_template_part('sidebar', 'footer'); ?> equals <?php get_sidebar('footer'); ?>
 ```
 * check option and show it in social-fa.php seciton
 
@@ -21,3 +21,8 @@ of_get_option( $name, $default = false )//it will get the option value.
 ```
 
 #Fontawesome is awesome
+
+
+#TODO List
+* widget for quick comment on hxj and wxs. widget with option?
+* add reply on comment
